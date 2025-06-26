@@ -1,88 +1,115 @@
-# Four-Wheel-Bot-ROS2 🤖
+# 🚗 Four-Wheel Bot – ROS 2 + Gazebo Simulation
 
-A simple mobile robot model with four wheels designed using **ROS 2** and **Gazebo simulation**. This project demonstrates URDF modeling, TF broadcasting, and integration with `robot_state_publisher` to simulate basic robot structure and movement.
+This project simulates a four-wheeled mobile robot using ROS 2 (Humble) and Gazebo 11. It includes a URDF model, launch files, and a reliable launch method using two terminals.
 
 ---
 
-## 📦 Project Structure
+## 📂 Repository Structure
 
 ```
 four_wheel_bot/
-├── urdf/
-│   └── robot.urdf.xacro
 ├── launch/
-│   └── display.launch.py
+│   ├── spawn_robot.launch.py
+│   └── sim_headless.launch.py
+├── urdf/
+│   └── four_wheel_bot.urdf.xacro
+├── CMakeLists.txt
 ├── package.xml
-└── setup.py
+└── README.md
 ```
 
 ---
 
-## 🚀 Features
+## ✅ Working Launch Method (Recommended)
 
-- Robot model defined using `xacro` (XML macros for URDF)
-- Spawns in **Gazebo** simulation
-- Visualizes robot and TFs in **RViz2**
-- Modular design: you can extend with sensors or controllers later
-
----
-
-## 🛠️ Dependencies
-
-- ROS 2 (Humble or later)
-- `gazebo_ros`
-- `xacro`
-- `robot_state_publisher`
-- `joint_state_publisher`
-
----
-
-## 🧪 How to Run
-
-### 1. Build the workspace
+### 🖥️ Terminal 1: Start Gazebo in headless mode
 
 ```bash
+gazebo --verbose -s libgazebo_ros_factory.so --headless-rendering
+```
+
+### 🖥️ Terminal 2: Build and spawn robot
+
+```bash
+cd ~/ros2_ws
+rm -rf build install log  # optional cleanup
+colcon build
+source install/setup.bash
+ros2 launch four_wheel_bot spawn_robot.launch.py
+```
+
+✔️ This reliably spawns the robot in Gazebo.
+
+---
+
+## 📦 Dependencies
+
+Make sure these packages are installed:
+
+```bash
+sudo apt update
+sudo apt install ros-humble-gazebo-ros-pkgs ros-humble-gazebo-ros2-control ros-humble-gazebo-plugins
+```
+
+---
+
+## 🛠️ Troubleshooting
+
+- **Gazebo closes or crashes instantly**:
+  ```bash
+  pkill -9 gzserver
+  pkill -9 gzclient
+  ```
+
+- **Robot doesn’t appear in Gazebo**:
+  - Always use the correct plugin:
+    ```bash
+    gazebo --verbose -s libgazebo_ros_factory.so --headless-rendering
+    ```
+
+---
+
+## 🧾 Using This GitHub Repository
+
+To use this repository:
+
+```bash
+cd ~/ros2_ws/src
+git clone https://github.com/Mohammed-Shehsin/Four-Wheel-Bot-ROS2.git four_wheel_bot
 cd ~/ros2_ws
 colcon build
 source install/setup.bash
 ```
 
-### 2. Launch robot in RViz
+Then follow the launch method above.
+
+---
+
+## 📄 Additional Launch Option
+
+You can also run the secondary launch file:
 
 ```bash
-ros2 launch four_wheel_bot display.launch.py
+ros2 launch four_wheel_bot sim_headless.launch.py
 ```
 
-### 3. Spawn in Gazebo
+Make sure the following dependencies exist in `package.xml`:
 
-In another terminal:
-
-```bash
-source ~/ros2_ws/install/setup.bash
-ros2 launch gazebo_ros gazebo.launch.py
-ros2 run gazebo_ros spawn_entity.py -topic robot_description -entity four_wheel_bot
+```xml
+<exec_depend>launch</exec_depend>
+<exec_depend>launch_ros</exec_depend>
 ```
 
 ---
 
-## 📌 Notes
-
-- Make sure `robot_state_publisher` is running and the `robot_description` topic is published properly.
-- If the robot is not visible in **RViz** or **Gazebo**, check:
-  - `base_link` is set as **Fixed Frame**
-  - Zoom out in the 3D view
-  - Visual elements are correctly defined in the URDF
-- The robot is scaled reasonably to real-world sizes. Adjust the size in `robot.urdf.xacro` if needed.
-
----
-
-## 🧑‍💻 Author
+## 👤 Author
 
 **Mohammed Shehsin**  
-GitHub: [Mohammed-Shehsin](https://github.com/Mohammed-Shehsin)
+[GitHub – Mohammed-Shehsin](https://github.com/Mohammed-Shehsin)  
+📧 mohamedshehsin@gmail.com
 
 ---
 
-## 📝 License
+## 📜 License
 
-This project is licensed under the **MIT License**.
+This project is licensed under the MIT License.
