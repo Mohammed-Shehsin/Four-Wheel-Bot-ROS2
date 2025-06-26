@@ -106,7 +106,7 @@ Make sure the following dependencies exist in `package.xml`:
 
 **Mohammed Shehsin**  
 [GitHub – Mohammed-Shehsin](https://github.com/Mohammed-Shehsin)  
-📧 mohamedshehsin@gmail.com
+📧 mohamedshehsin654@gmail.com
 
 ---
 
