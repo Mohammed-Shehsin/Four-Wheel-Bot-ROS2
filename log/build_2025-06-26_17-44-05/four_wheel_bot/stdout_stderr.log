@@ -1,0 +1,31 @@
+running egg_info
+creating build/four_wheel_bot/four_wheel_bot.egg-info
+writing build/four_wheel_bot/four_wheel_bot.egg-info/PKG-INFO
+writing dependency_links to build/four_wheel_bot/four_wheel_bot.egg-info/dependency_links.txt
+writing entry points to build/four_wheel_bot/four_wheel_bot.egg-info/entry_points.txt
+writing requirements to build/four_wheel_bot/four_wheel_bot.egg-info/requires.txt
+writing top-level names to build/four_wheel_bot/four_wheel_bot.egg-info/top_level.txt
+writing manifest file 'build/four_wheel_bot/four_wheel_bot.egg-info/SOURCES.txt'
+reading manifest file 'build/four_wheel_bot/four_wheel_bot.egg-info/SOURCES.txt'
+writing manifest file 'build/four_wheel_bot/four_wheel_bot.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/shehsin/ros2_ws/src/four_wheel_bot/build/four_wheel_bot/build
+creating /home/shehsin/ros2_ws/src/four_wheel_bot/build/four_wheel_bot/build/lib
+creating /home/shehsin/ros2_ws/src/four_wheel_bot/build/four_wheel_bot/build/lib/four_wheel_bot
+copying four_wheel_bot/__init__.py -> /home/shehsin/ros2_ws/src/four_wheel_bot/build/four_wheel_bot/build/lib/four_wheel_bot
+running install
+running install_lib
+creating /home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/lib/python3.10/site-packages/four_wheel_bot
+copying /home/shehsin/ros2_ws/src/four_wheel_bot/build/four_wheel_bot/build/lib/four_wheel_bot/__init__.py -> /home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/lib/python3.10/site-packages/four_wheel_bot
+byte-compiling /home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/lib/python3.10/site-packages/four_wheel_bot/__init__.py to __init__.cpython-310.pyc
+running install_data
+copying package.xml -> /home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/share/four_wheel_bot
+creating /home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/share/four_wheel_bot/launch
+copying launch/view_robot.launch.py -> /home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/share/four_wheel_bot/launch
+creating /home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/share/four_wheel_bot/urdf
+copying urdf/robot.urdf.xacro -> /home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/share/four_wheel_bot/urdf
+running install_egg_info
+Copying build/four_wheel_bot/four_wheel_bot.egg-info to /home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/lib/python3.10/site-packages/four_wheel_bot-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/shehsin/ros2_ws/src/four_wheel_bot/build/four_wheel_bot/install.log'

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="four_wheel_bot">
+
+  <xacro:property name="wheel_radius" value="0.05"/>
+  <xacro:property name="wheel_width" value="0.02"/>
+  <xacro:property name="body_length" value="0.4"/>
+  <xacro:property name="body_width" value="0.3"/>
+  <xacro:property name="body_height" value="0.1"/>
+
+  <!-- Chassis -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="${body_length} ${body_width} ${body_height}"/>
+      </geometry>
+      <material name="gray"/>
+    </visual>
+  </link>
+
+  <!-- Wheels -->
+  <xacro:macro name="wheel" params="name x y">
+    <link name="${name}">
+      <visual>
+        <geometry>
+          <cylinder length="${wheel_width}" radius="${wheel_radius}"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="1.5707 0 0"/>
+        <material name="black"/>
+      </visual>
+    </link>
+    <joint name="${name}_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link="${name}"/>
+      <origin xyz="${x} ${y} -${wheel_radius + 0.01}" rpy="0 0 0"/>
+      <axis xyz="0 1 0"/>
+    </joint>
+  </xacro:macro>
+
+  <xacro:wheel name="front_left_wheel"  x="0.15"  y="0.13"/>
+  <xacro:wheel name="front_right_wheel" x="0.15"  y="-0.13"/>
+  <xacro:wheel name="rear_left_wheel"   x="-0.15" y="0.13"/>
+  <xacro:wheel name="rear_right_wheel"  x="-0.15" y="-0.13"/>
+
+</robot>

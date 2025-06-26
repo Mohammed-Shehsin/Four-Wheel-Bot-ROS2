@@ -1,0 +1,90 @@
+[0.523s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.524s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x72e4ebe583d0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x72e4ebe23fa0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x72e4ebe23fa0>>)
+[1.417s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.417s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.418s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.418s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.418s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.418s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.418s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/shehsin/ros2_ws/src/four_wheel_bot'
+[1.419s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.419s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.419s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.420s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.420s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.420s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.420s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.420s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.420s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.482s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_python' and name 'four_wheel_bot'
+[1.482s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.482s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.482s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.482s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.483s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.580s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.580s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.595s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 435 installed packages in /opt/ros/humble
+[1.634s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.983s] Level 5:colcon.colcon_core.verb:set package 'four_wheel_bot' build argument 'cmake_args' from command line to 'None'
+[1.984s] Level 5:colcon.colcon_core.verb:set package 'four_wheel_bot' build argument 'cmake_target' from command line to 'None'
+[1.984s] Level 5:colcon.colcon_core.verb:set package 'four_wheel_bot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.987s] Level 5:colcon.colcon_core.verb:set package 'four_wheel_bot' build argument 'cmake_clean_cache' from command line to 'False'
+[1.987s] Level 5:colcon.colcon_core.verb:set package 'four_wheel_bot' build argument 'cmake_clean_first' from command line to 'False'
+[1.987s] Level 5:colcon.colcon_core.verb:set package 'four_wheel_bot' build argument 'cmake_force_configure' from command line to 'False'
+[1.987s] Level 5:colcon.colcon_core.verb:set package 'four_wheel_bot' build argument 'ament_cmake_args' from command line to 'None'
+[1.987s] Level 5:colcon.colcon_core.verb:set package 'four_wheel_bot' build argument 'catkin_cmake_args' from command line to 'None'
+[1.988s] Level 5:colcon.colcon_core.verb:set package 'four_wheel_bot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.988s] DEBUG:colcon.colcon_core.verb:Building package 'four_wheel_bot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/shehsin/ros2_ws/src/four_wheel_bot/build/four_wheel_bot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot', 'merge_install': False, 'path': '/home/shehsin/ros2_ws/src/four_wheel_bot', 'symlink_install': False, 'test_result_base': None}
+[1.988s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.992s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.992s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/shehsin/ros2_ws/src/four_wheel_bot' with build type 'ament_python'
+[1.993s] Level 1:colcon.colcon_core.shell:create_environment_hook('four_wheel_bot', 'ament_prefix_path')
+[2.005s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.006s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/share/four_wheel_bot/hook/ament_prefix_path.ps1'
+[2.010s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/share/four_wheel_bot/hook/ament_prefix_path.dsv'
+[2.013s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/share/four_wheel_bot/hook/ament_prefix_path.sh'
+[2.017s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.018s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.208s] WARNING:colcon.colcon_ros.task.ament_python.build:Package 'four_wheel_bot' doesn't explicitly install a marker in the package index (colcon-ros currently does it implicitly but that fallback will be removed in the future)
+[3.209s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/shehsin/ros2_ws/src/four_wheel_bot'
+[3.211s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.211s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.983s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/shehsin/ros2_ws/src/four_wheel_bot': PYTHONPATH=/home/shehsin/ros2_ws/src/four_wheel_bot/build/four_wheel_bot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/four_wheel_bot build --build-base /home/shehsin/ros2_ws/src/four_wheel_bot/build/four_wheel_bot/build install --record /home/shehsin/ros2_ws/src/four_wheel_bot/build/four_wheel_bot/install.log --single-version-externally-managed install_data
+[6.269s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/shehsin/ros2_ws/src/four_wheel_bot' returned '0': PYTHONPATH=/home/shehsin/ros2_ws/src/four_wheel_bot/build/four_wheel_bot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/four_wheel_bot build --build-base /home/shehsin/ros2_ws/src/four_wheel_bot/build/four_wheel_bot/build install --record /home/shehsin/ros2_ws/src/four_wheel_bot/build/four_wheel_bot/install.log --single-version-externally-managed install_data
+[6.291s] Level 1:colcon.colcon_core.environment:checking '/home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot' for CMake module files
+[6.293s] Level 1:colcon.colcon_core.environment:checking '/home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot' for CMake config files
+[6.295s] Level 1:colcon.colcon_core.environment:checking '/home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/lib'
+[6.296s] Level 1:colcon.colcon_core.environment:checking '/home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/bin'
+[6.296s] Level 1:colcon.colcon_core.environment:checking '/home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/lib/pkgconfig/four_wheel_bot.pc'
+[6.297s] Level 1:colcon.colcon_core.environment:checking '/home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/lib/python3.10/site-packages'
+[6.297s] Level 1:colcon.colcon_core.shell:create_environment_hook('four_wheel_bot', 'pythonpath')
+[6.298s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/share/four_wheel_bot/hook/pythonpath.ps1'
+[6.300s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/share/four_wheel_bot/hook/pythonpath.dsv'
+[6.301s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/share/four_wheel_bot/hook/pythonpath.sh'
+[6.303s] Level 1:colcon.colcon_core.environment:checking '/home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/bin'
+[6.304s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(four_wheel_bot)
+[6.305s] INFO:colcon.colcon_core.shell:Creating package script '/home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/share/four_wheel_bot/package.ps1'
+[6.308s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/share/four_wheel_bot/package.dsv'
+[6.311s] INFO:colcon.colcon_core.shell:Creating package script '/home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/share/four_wheel_bot/package.sh'
+[6.315s] INFO:colcon.colcon_core.shell:Creating package script '/home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/share/four_wheel_bot/package.bash'
+[6.318s] INFO:colcon.colcon_core.shell:Creating package script '/home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/share/four_wheel_bot/package.zsh'
+[6.322s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/shehsin/ros2_ws/src/four_wheel_bot/install/four_wheel_bot/share/colcon-core/packages/four_wheel_bot)
+[6.323s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[6.324s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[6.325s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[6.325s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[6.356s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[6.357s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[6.357s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[6.402s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[6.404s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/shehsin/ros2_ws/src/four_wheel_bot/install/local_setup.ps1'
+[6.411s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/shehsin/ros2_ws/src/four_wheel_bot/install/_local_setup_util_ps1.py'
+[6.423s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/shehsin/ros2_ws/src/four_wheel_bot/install/setup.ps1'
+[6.431s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/shehsin/ros2_ws/src/four_wheel_bot/install/local_setup.sh'
+[6.435s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/shehsin/ros2_ws/src/four_wheel_bot/install/_local_setup_util_sh.py'
+[6.438s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/shehsin/ros2_ws/src/four_wheel_bot/install/setup.sh'
+[6.442s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/shehsin/ros2_ws/src/four_wheel_bot/install/local_setup.bash'
+[6.444s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/shehsin/ros2_ws/src/four_wheel_bot/install/setup.bash'
+[6.449s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/shehsin/ros2_ws/src/four_wheel_bot/install/local_setup.zsh'
+[6.451s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/shehsin/ros2_ws/src/four_wheel_bot/install/setup.zsh'
